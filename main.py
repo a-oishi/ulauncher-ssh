@@ -62,11 +62,11 @@ class SshExtension(Extension):
         home = expanduser("~")
 
         cmd = self.terminal_cmd.replace("%SHELL", shell).replace("%CONN", addr)
-        logger.debug(cmd)
-        logger.debug(shell)
-        logger.debug(home)
-        logger.debug(self.terminal)
-        logger.debug(self.terminal_arg)
+        logger.info(cmd)
+        logger.info(shell)
+        logger.info(home)
+        logger.info(self.terminal)
+        logger.info(self.terminal_arg)
 
         if self.terminal:
             subprocess.Popen([self.terminal, self.terminal_arg, cmd], cwd=home)
